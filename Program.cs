@@ -1,3 +1,5 @@
+using ElectronicStoreServer.Data;
+
 namespace ElectronicStoreServer
 {
 	public class Program
@@ -7,6 +9,8 @@ namespace ElectronicStoreServer
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+
+			builder.Services.AddSingleton<ItemRepository>();
 
 			builder.Services.AddControllers();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
